@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>こども弦楽合奏団 ルーチェ | 下松市の地域クラブ</title>
+<meta name="description" content="下松市花岡公民館を拠点に活動する、小中学生のための弦楽合奏団「こども弦楽合奏団 ルーチェ」。会員募集中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+JP:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --terracotta: #C84B31;
+    --terracotta-dark: #A33D26;
+    --olive: #6B8E23;
+    --olive-dark: #556B1A;
+    --cream: #FAF3E0;
+    --cream-deep: #F2E8CC;
+    --navy: #1B2845;
+    --ink: #3D2F1F;
+    --paper: #FDFBF5;
+    --rule: rgba(61, 47, 31, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ==================== ナビ ==================== */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(253, 251, 245, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 16px 0;
+  }
+  nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--navy);
+  }
+  .brand-mark {
+    color: var(--terracotta);
+    font-style: italic;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover {
+    color: var(--terracotta);
+  }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ==================== ヒーロー ==================== */
+  .hero {
+    padding: 100px 0 120px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+  .hero-italic {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--terracotta);
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: "Noto Serif JP", serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.3;
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+  }
+  .hero-tagline {
+    font-size: 18px;
+    line-height: 2;
+    max-width: 560px;
+    margin-bottom: 48px;
+    color: var(--ink);
+  }
+  .cta-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.25s;
+    letter-spacing: 0.05em;
+  }
+  .btn-primary {
+    background: var(--terracotta);
+    color: #FFF;
+    border: 1px solid var(--terracotta);
+  }
+  .btn-primary:hover {
+    background: var(--terracotta-dark);
+    border-color: var(--terracotta-dark);
+    transform: translateY(-1px);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--olive-dark);
+    border: 1px solid var(--olive);
+  }
+  .btn-secondary:hover {
+    background: var(--olive);
+    color: #FFF;
+  }
+
+  /* ==================== 共通セクション ==================== */
+  section {
+    padding: 96px 0;
+  }
+  .section-label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--terracotta);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 48px;
+    letter-spacing: 0.02em;
+  }
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--terracotta);
+    margin-top: 20px;
+  }
+
+  /* ==================== ルーチェについて ==================== */
+  .about {
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 800px) {
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  }
+  .about-card {
+    background: var(--paper);
+    padding: 40px;
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--terracotta);
+    border-radius: 2px;
+  }
+  .about-card.olive {
+    border-left-color: var(--olive);
+  }
+  .about-card h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+  .about-card p {
+    font-size: 15px;
+    line-height: 2;
+  }
+  .about-card .sign {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    color: var(--terracotta);
+    margin-top: 16px;
+    text-align: right;
+    font-size: 15px;
+  }
+
+  /* ==================== 活動内容 ==================== */
+  .activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .activity-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 32px 28px;
+    border-radius: 4px;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .activity-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--terracotta);
+  }
+  .activity-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+    color: var(--terracotta);
+  }
+  .activity-card h4 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--olive-dark);
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+  .activity-card .value {
+    font-family: "Noto Serif JP", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .activity-card .note {
+    font-size: 13px;
+    color: var(--ink);
+    opacity: 0.75;
+    line-height: 1.7;
+  }
+
+  /* ==================== 指導者紹介 ==================== */
+  .members {
+    background: var(--cream);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .member-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  @media (max-width: 800px) {
+    .member-grid { grid-template-columns: 1fr; }
+  }
+  .member-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 40px;
+    border-radius: 2px;
+  }
+  .member-portrait {
+    width: 100px;
+    height: 100px;
+    background: var(--cream-deep);
+    border: 2px solid var(--terracotta);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+  .member-portrait svg {
+    width: 50px;
+    height: 50px;
+    color: var(--terracotta);
+  }
+  .member-role {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--olive-dark);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .member-name {
+    font-family: "Noto Serif JP", serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 16px;
+  }
+  .member-bio {
+    font-size: 14px;
+    line-height: 1.9;
+    color: var(--ink);
+  }
+  .member-bio .tag {
+    display: inline-block;
+    font-size: 12px;
+    background: var(--cream-deep);
+    padding: 4px 12px;
+    border-radius: 2px;
+    margin-top: 12px;
+    color: var(--olive-dark);
+  }
+
+  /* ==================== 入会案内 ==================== */
+  .steps {
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+  .steps li {
+    counter-increment: step;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 28px 24px;
+    position: relative;
+    border-radius: 4px;
+  }
+  .steps li::before {
+    content: counter(step);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--terracotta);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .steps li h5 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .steps li p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+
+  /* お問い合わせ */
+  .contact-box {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 48px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  @media (max-width: 720px) {
+    .contact-box { grid-template-columns: 1fr; padding: 32px; }
+  }
+  .contact-box h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .contact-box p {
+    font-size: 14px;
+    line-height: 1.9;
+    opacity: 0.85;
+  }
+  .contact-info {
+    text-align: right;
+  }
+  @media (max-width: 720px) {
+    .contact-info { text-align: left; }
+  }
+  .contact-info .label {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 13px;
+    color: rgba(250, 243, 224, 0.6);
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .contact-info .value {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 20px;
+    word-break: break-all;
+  }
+  .contact-info a {
+    color: var(--cream);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(250, 243, 224, 0.4);
+    transition: border-color 0.2s;
+  }
+  .contact-info a:hover {
+    border-bottom-color: var(--terracotta);
+  }
+
+  /* ==================== フッター ==================== */
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 48px 0 32px;
+    font-size: 13px;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .footer-brand {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  .footer-meta {
+    opacity: 0.7;
+    line-height: 1.9;
+  }
+  .footer-links {
+    text-align: right;
+    line-height: 2;
+  }
+  .footer-links a {
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.85;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .footer-links a:hover {
+    border-bottom-color: var(--terracotta);
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(250, 243, 224, 0.15);
+    opacity: 0.5;
+    font-size: 12px;
+  }
+
+  /* スクロールアニメーション */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ナビ -->
+<nav>
+  <div class="container">
+    <div class="brand">Luce <span class="brand-mark">·</span> <span style="font-family: 'Noto Serif JP', serif; font-size: 16px;">ルーチェ</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">ルーチェについて</a></li>
+      <li><a href="#activity">活動内容</a></li>
+      <li><a href="#members">指導者</a></li>
+      <li><a href="#join">入会案内</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ヒーロー -->
+<header class="hero">
+  <svg class="hero-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- 装飾用バイオリンシルエット -->
+    <path d="M100 30 Q90 40 88 60 Q80 65 78 80 Q70 100 78 130 Q85 165 100 175 Q115 165 122 130 Q130 100 122 80 Q120 65 112 60 Q110 40 100 30 Z" fill="#C84B31"/>
+    <circle cx="100" cy="100" r="3" fill="#1B2845"/>
+    <line x1="100" y1="40" x2="100" y2="175" stroke="#1B2845" stroke-width="0.5"/>
+  </svg>
+  <div class="container">
+    <div class="hero-italic fade-in">Luce — luce significa "luce"</div>
+    <h1 class="fade-in delay-1">弦の響きが、<br>子どもたちの<br><span style="color: var(--terracotta);">光</span>になる場所。</h1>
+    <p class="hero-tagline fade-in delay-2">
+      下松市花岡公民館を拠点に活動する、小中学生のための弦楽合奏団です。<br>
+      初めて楽器に触れる子も、もっと上手くなりたい子も、<br>それぞれのペースで音楽と出会えます。
+    </p>
+    <div class="cta-group fade-in delay-3">
+      <a href="#join" class="btn btn-primary">体験会のお申込み</a>
+      <a href="#about" class="btn btn-secondary">ルーチェを知る</a>
+    </div>
+  </div>
+</header>
+
+<!-- ルーチェについて -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-label">About Luce</div>
+    <h2 class="section-title">ルーチェについて</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>団名「ルーチェ」に込めた想い</h3>
+        <p>
+          ルーチェ（Luce）は、イタリア語で「光」を意味します。<br><br>
+          弦楽器の響きが、子どもたちの心に小さな光を灯し、その光が地域の文化を照らしていく——。<br><br>
+          ここは、楽器に初めて触れる子も、もっと上手くなりたい子も、それぞれのペースで音楽と出会える場所です。
+        </p>
+      </div>
+      <div class="about-card olive">
+        <h3>代表のご挨拶</h3>
+        <p>
+          私自身、幼い頃からバイオリンが大好きで、その魅力にずっと支えられてきました。<br><br>
+          その喜びを、地域の子どもたちにも届けたい——それがルーチェを立ち上げた想いです。<br><br>
+          上手に弾けることよりも、仲間と音を合わせる楽しさ、自分の音が誰かに届く感動を、一緒に体験していきたいと思っています。
+        </p>
+        <div class="sign">— 代表　中山 朋子</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 活動内容 -->
+<section id="activity">
+  <div class="container">
+    <div class="section-label">Activity</div>
+    <h2 class="section-title">活動内容</h2>
+    <div class="activity-grid">
+      <div class="activity-card">
+        <svg class="activity-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+        </svg>
+        <h4>場所</h4>
+        <div class="value">花岡公民館</div>
+        <div class="note">下松市花岡</div>
+      </div>
+
+      <div class="activity-card">
+        <svg class="activity-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <h4>活動日時</h4>
+        <div class="value">週1〜2回</div>
+        <div class="note">詳細はお問い合わせください</div>
+      </div>
+
+      <div class="activity-card">
+        <svg class="activity-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+        </svg>
+        <h4>対象</h4>
+        <div class="value">小・中学生</div>
+        <div class="note">下松市在住の中学生<br>（指導者が認めた場合は小学生も可）</div>
+      </div>
+
+      <div class="activity-card">
+        <svg class="activity-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+        <h4>会費</h4>
+        <div class="value">月 5,000円</div>
+        <div class="note">入会費 5,000円<br>楽器レンタル可</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 指導者紹介 -->
+<section id="members" class="members">
+  <div class="container">
+    <div class="section-label">Members</div>
+    <h2 class="section-title">代表・指導者紹介</h2>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-portrait">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div class="member-role">Representative</div>
+        <div class="member-name">中山 朋子</div>
+        <p class="member-bio">
+          幼少よりバイオリンに親しみ、その魅力に支えられて育ってきました。地域の子どもたちにも音楽の喜びを届けたいという想いから、ルーチェを立ち上げました。<br>
+          <span class="tag">代表 / 運営</span>
+        </p>
+      </div>
+
+      <div class="member-card">
+        <div class="member-portrait">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l10.5-3m0 6.553v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 11-.99-3.467l2.31-.66a2.25 2.25 0 001.632-2.163zm0 0V2.25L9 5.25v10.303m0 0v3.75a2.25 2.25 0 01-1.632 2.163l-1.32.377a1.803 1.803 0 01-.99-3.467l2.31-.66A2.25 2.25 0 009 15.553z"/>
+          </svg>
+        </div>
+        <div class="member-role">Instructor</div>
+        <div class="member-name">上土居 宏代</div>
+        <p class="member-bio">
+          エリザベト音楽大学 音楽学部 器楽学科卒業。日本弦楽指導協会会員。<br>
+          長年にわたり弦楽器の指導に携わり、子どもたちの個性を活かしたレッスンを行っています。<br>
+          <span class="tag">指導者 / 弦楽器全般</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 入会案内 -->
+<section id="join">
+  <div class="container">
+    <div class="section-label">How to Join</div>
+    <h2 class="section-title">入会のご案内</h2>
+
+    <ol class="steps">
+      <li>
+        <h5>お問い合わせ</h5>
+        <p>下記の電話・メールよりご連絡ください。</p>
+      </li>
+      <li>
+        <h5>体験会へ参加</h5>
+        <p>実際の活動を見学・体験いただけます。</p>
+      </li>
+      <li>
+        <h5>入会手続き</h5>
+        <p>入会申込書をご記入・ご提出ください。</p>
+      </li>
+      <li>
+        <h5>活動スタート</h5>
+        <p>仲間と一緒に音楽を始めましょう。</p>
+      </li>
+    </ol>
+
+    <div class="contact-box">
+      <div>
+        <h3>体験会・お問い合わせ</h3>
+        <p>
+          見学・体験は随時受け付けています。<br>
+          楽器をお持ちでない方も、お気軽にご相談ください。<br>
+          楽器レンタルもご利用いただけます。
+        </p>
+      </div>
+      <div class="contact-info">
+        <div class="label">Phone</div>
+        <div class="value"><a href="tel:08063108050">080-6310-8050</a></div>
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:bwjxs744@gmail.com">bwjxs744@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="container">
+    <div>
+      <div class="footer-brand">Luce</div>
+      <div class="footer-meta">
+        こども弦楽合奏団 ルーチェ<br>
+        〒下松市南花岡6-7-12-202<br>
+        TEL: 080-6310-8050
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:bwjxs744@gmail.com">お問い合わせ</a><br>
+      <a href="#about">ルーチェについて</a><br>
+      <a href="#join">入会案内</a>
+    </div>
+    <div class="copyright">
+      © Luce — こども弦楽合奏団ルーチェ. All rights reserved.<br>
+      下松市地域クラブ活動（文化芸術）登録団体
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
