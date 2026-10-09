@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luce-hp.cloud2001.workers.dev/sitemap.xml

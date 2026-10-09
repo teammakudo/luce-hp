@@ -2,9 +2,13 @@
 
 Luce HP の公開用シングルページです。
 
+公開URL: https://luce-hp.cloud2001.workers.dev/
+
 ## 構成
 
 - `index.html`：トスカーナ風デザインの叩き台ページ
+- `robots.txt`：検索エンジン向けクロール設定
+- `sitemap.xml`：公開URLのサイトマップ
 
 ## メモ
 
