@@ -217,6 +217,33 @@
     line-height: 2.1;
     color: var(--ink);
   }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 22px;
+    padding: 15px 34px;
+    border-radius: 999px;
+    font-size: clamp(16px, 4vw, 18px);
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    color: var(--white);
+    background: var(--orange);
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--orange-deep);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 var(--orange-deep);
+    color: var(--white);
+  }
+  .hero-cta-note {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green-deep);
+  }
 
   /* ===== セクション共通 ===== */
   section { padding: 44px 0; position: relative; }
@@ -678,6 +705,8 @@
   <div class="hero-sub">子ども弦楽合奏団</div>
   <div class="hero-italian">Orchestra d'archi dei bambini</div>
   <div><span class="hero-catch">＼ いっしょに音楽を楽しもう！ ／</span></div>
+  <div><a class="hero-cta" href="#contact">見学・体験はこちら</a></div>
+  <div class="hero-cta-note">見学・体験いつでも大歓迎！</div>
   <p class="hero-lead">
     山口県下松市を拠点に活動する、子どものための弦楽合奏団です。<br>
     バイオリンなどの弦楽器に初めて触れる子も、もっと上手くなりたい子も、<br>それぞれのペースで音楽と出会えます。
